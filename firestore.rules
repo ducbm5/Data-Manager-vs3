@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow authenticated users to read and write to any collection
+    // This supports the flat data structure where records don't necessarily have an authorUid field
+    match /{collectionPath}/{documentId} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}

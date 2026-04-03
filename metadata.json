@@ -1,0 +1,5 @@
+{
+  "name": "TSV Data Explorer",
+  "description": "A clean and responsive dashboard to explore and search through data fetched from a Google Sheets TSV export.",
+  "requestFramePermissions": []
+}

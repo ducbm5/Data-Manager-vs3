@@ -1,0 +1,21 @@
+{
+  "entities": {
+    "Record": {
+      "title": "Flat Data Record",
+      "description": "A generic record imported from TSV or Excel, mirroring the source columns exactly.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The document ID, optionally derived from the 'id' column in the source file."
+        }
+      }
+    }
+  },
+  "firestore": {
+    "/{collectionName}": {
+      "schema": "Record",
+      "description": "Any top-level collection containing flat data records."
+    }
+  }
+}
